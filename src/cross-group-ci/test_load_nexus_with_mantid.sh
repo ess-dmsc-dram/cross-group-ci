@@ -9,16 +9,20 @@ cd $HOME;
 cd generate-nexus-files;
 echo "Updating generate-nexus-files";
 git pull origin master;
+git log | head -1;
 cd src/nexusjson;
 echo "Updating nexusjson";
 git pull origin master;
+git log | head -1;
 cd ../nexusutils;
 echo "Updating nexusutils"
 git pull origin master;
+git log | head -1;
 
 cd ${HOME}/mantid/source;
 echo "Updating mantid";
-git pull  origin master;
+git pull origin master;
+git log | head -1;
 cd ../build
 echo "Building mantid";
 make install;
