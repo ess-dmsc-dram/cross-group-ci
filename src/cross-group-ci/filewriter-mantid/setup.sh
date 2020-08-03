@@ -4,7 +4,6 @@
 CWD=$(pwd);
 
 # Update repos
-
 cd $HOME;
 cd generate-nexus-files;
 echo "Updating generate-nexus-files";
@@ -33,6 +32,4 @@ export PYTHONPATH=${HOME}/mantid/install/bin:${HOME}/mantid/install/lib:${PYTHON
 # Generate and load WISH file
 cd ${HOME}/generate-nexus-files/examples/wish;
 python WISH_example_with_fake_data.py;
-FNAME=$(pwd)/WISH_example.nxs;
-cd ${CWD};
-python filewriter-mantid/mantid_load_file.py ${FNAME};
+mv WISH_example.nxs ${CWD}/.;
