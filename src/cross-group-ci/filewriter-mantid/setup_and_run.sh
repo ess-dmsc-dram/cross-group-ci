@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Get current path
-CWD=$(pwd);
+# CWD=$(pwd);
+CWD=${HOME}/cross-group-ci/src/cross-group-ci/filewriter-mantid
 
 # Update repos
 cd $HOME;
