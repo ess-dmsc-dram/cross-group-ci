@@ -6,6 +6,10 @@ CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )";
 # Python command
 PY=${HOME}/miniconda3/bin/python
 
+# Setup proxy settings
+http_proxy=http://192.168.1.1:8123;
+https_proxy=https://192.168.1.1:8123;
+
 # Update repos
 cd $HOME;
 cd generate-nexus-files;
