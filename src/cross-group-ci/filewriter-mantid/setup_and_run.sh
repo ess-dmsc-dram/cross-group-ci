@@ -33,3 +33,7 @@ export PYTHONPATH=${HOME}/mantid/install/bin:${HOME}/mantid/install/lib:${PYTHON
 cd ${HOME}/generate-nexus-files/examples/wish;
 python WISH_example_with_fake_data.py;
 mv WISH_example.nxs ${CWD}/.;
+
+# Run the python tests
+cd ${CWD};
+python -m pytest;
