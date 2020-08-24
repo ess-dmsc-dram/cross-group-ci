@@ -5,7 +5,7 @@ divider="========================"
 # Generate new log file name
 today=$(date "+%Y-%m-%d");
 logfile=${HOME}/logs/${today}.log;
-touch ${logfile};
+echo > ${logfile};
 
 # Get directory where this script is located and cd into it
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )";

@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Get current path
-# CWD=$(pwd);
-CWD=${HOME}/cross-group-ci/src/cross-group-ci/filewriter-mantid
+CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )";
+
+# Python command
+PY=${HOME}/miniconda3/bin/python
 
 # Update repos
 cd $HOME;
@@ -32,9 +34,9 @@ export PYTHONPATH=${HOME}/mantid/install/bin:${HOME}/mantid/install/lib:${PYTHON
 
 # Generate and load WISH file
 cd ${HOME}/generate-nexus-files/examples/wish;
-python WISH_example_with_fake_data.py;
+${PY} WISH_example_with_fake_data.py;
 mv WISH_example.nxs ${CWD}/.;
 
 # Run the python tests
 cd ${CWD};
-python -m pytest;
+${PY} -m pytest;
