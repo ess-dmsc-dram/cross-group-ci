@@ -19,7 +19,9 @@ for test_dir in ${dirlist} ; do
     cd ${test_dir};
     echo ${divider} >> ${logfile};
     echo ${test_dir} >> ${logfile};
-    bash setup_and_run.sh >> ${logfile} 2>&1;
     echo ${divider} >> ${logfile};
+    bash setup_and_run.sh >> ${logfile} 2>&1;
     cd ../;
+    echo ${divider} >> ${logfile};
+    echo >> ${logfile};
 done
